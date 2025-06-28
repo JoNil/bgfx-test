@@ -166,10 +166,7 @@ fn main() {
                 glfw::WindowEvent::Key(Key::Escape, _, Action::Press, _) => {
                     window.set_should_close(true)
                 }
-                glfw::WindowEvent::CursorPos(x, y) => {
-                    println!("{x} {y}");
-                    cursor_pos = Some((*x as f32, *y as f32))
-                }
+                glfw::WindowEvent::CursorPos(x, y) => cursor_pos = Some((*x as f32, *y as f32)),
                 _ => {}
             }
         }
@@ -193,7 +190,6 @@ fn main() {
         bgfx::set_view_transform(0, &view.to_cols_array(), &persp.to_cols_array());
 
         let (x_off, y_off) = cursor_pos.unwrap_or((0.0, 0.0));
-        println!("{x_off} {y_off}");
 
         for yy in 0..11 {
             for xx in 0..11 {
