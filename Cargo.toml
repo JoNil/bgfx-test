@@ -1,0 +1,13 @@
+[package]
+name = "bgfx-test"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+bgfx-rs = "0.20"
+glfw = "0.51"
+raw-window-handle = "0.5"
+glam = "0.30"
+
+[build-dependencies]
+bgfx-shaderc = { git = "https://github.com/JoNil/bgfx-shaderc.git" }
